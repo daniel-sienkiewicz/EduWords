@@ -1,0 +1,268 @@
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-18 17:24:22 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/henio/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/templates/rails/welcome/index.html.erb (2.5ms)
+Completed 200 OK in 86ms (Views: 68.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-18 17:24:25 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/henio/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-18 17:42:20 +0200
+
+ActiveRecord::PendingMigrationError (Migrations are pending; run 'bin/rake db:migrate RAILS_ENV=development' to resolve this issue.):
+  activerecord (4.0.3) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.3) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:373:in `_run__3245859138457868031__call__callbacks'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/henio/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/henio/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/henio/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/henio/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/henio/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/henio/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.5ms)
+  Rendered /home/henio/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.5ms)
+  [1m[36m (128.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (133.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateLanguages (20141018154213)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "languages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141018154213"]]
+  [1m[36m (132.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-18 17:42:46 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/henio/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/templates/rails/welcome/index.html.erb (1.6ms)
+Completed 200 OK in 18ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/languages" for 127.0.0.1 at 2014-10-18 17:42:50 +0200
+Processing by LanguagesController#index as HTML
+  [1m[35mLanguage Load (0.2ms)[0m  SELECT "languages".* FROM "languages"
+  Rendered languages/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 1626ms (Views: 1622.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-18 17:42:52 +0200
+
+
+Started GET "/assets/languages.css?body=1" for 127.0.0.1 at 2014-10-18 17:42:52 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-18 17:42:52 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-18 17:42:52 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-18 17:42:52 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-18 17:42:52 +0200
+
+
+Started GET "/assets/languages.js?body=1" for 127.0.0.1 at 2014-10-18 17:42:52 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-18 17:42:52 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateTests (20141018154510)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "tests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "result" integer, "date" varchar(255), "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141018154510"]]
+  [1m[36m (110.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/tests" for 127.0.0.1 at 2014-10-18 17:45:38 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TestsController#index as HTML
+  [1m[35mTest Load (0.2ms)[0m  SELECT "tests".* FROM "tests"
+  Rendered tests/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 371ms (Views: 358.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-18 17:45:38 +0200
+
+
+Started GET "/assets/languages.css?body=1" for 127.0.0.1 at 2014-10-18 17:45:38 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-18 17:45:38 +0200
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2014-10-18 17:45:38 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-18 17:45:38 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-18 17:45:38 +0200
+
+
+Started GET "/assets/languages.js?body=1" for 127.0.0.1 at 2014-10-18 17:45:38 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-18 17:45:38 +0200
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2014-10-18 17:45:38 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-18 17:45:39 +0200
+
+
+Started GET "/languages" for 127.0.0.1 at 2014-10-18 17:45:49 +0200
+Processing by LanguagesController#index as HTML
+  [1m[36mLanguage Load (0.2ms)[0m  [1mSELECT "languages".* FROM "languages"[0m
+  Rendered languages/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-18 17:45:49 +0200
+
+
+Started GET "/assets/languages.css?body=1" for 127.0.0.1 at 2014-10-18 17:45:49 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-18 17:45:49 +0200
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2014-10-18 17:45:49 +0200
+
+
+Started GET "/assets/languages.js?body=1" for 127.0.0.1 at 2014-10-18 17:45:49 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-18 17:45:49 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-18 17:45:49 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-18 17:45:49 +0200
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2014-10-18 17:45:49 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-18 17:45:49 +0200
+
+
+Started GET "/mainpage/index" for 127.0.0.1 at 2014-10-18 18:05:36 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainpageController#index as HTML
+  Rendered mainpage/index.html.erb within layouts/application (1.4ms)
+Warning. Error encountered while saving cache c32138261136a799be7b0cb54e54166dd77d84b1/mainpage.css.scssc: can't dump anonymous class #<Class:0x0000000254f0e0>
+
+Completed 200 OK in 393ms (Views: 381.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-18 18:06:26 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainpageController#index as HTML
+  Rendered mainpage/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 119ms (Views: 108.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-18 18:06:37 +0200
+Processing by MainpageController#index as HTML
+  Rendered mainpage/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-18 18:06:39 +0200
+Processing by MainpageController#index as HTML
+  Rendered mainpage/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/languages" for 127.0.0.1 at 2014-10-18 18:06:43 +0200
+Processing by LanguagesController#index as HTML
+  [1m[35mLanguage Load (0.3ms)[0m  SELECT "languages".* FROM "languages"
+  Rendered languages/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 15ms (Views: 10.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-18 18:06:46 +0200
+Processing by MainpageController#index as HTML
+  Rendered mainpage/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2014-10-18 18:08:32 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/authors"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/henio/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/henio/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/henio/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/henio/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/henio/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /home/henio/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.3ms)
+  Rendered /home/henio/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (30.4ms)
+
+
+Started GET "/authors/index" for 127.0.0.1 at 2014-10-18 18:08:35 +0200
+Processing by AuthorsController#index as HTML
+  Rendered authors/index.html.erb within layouts/application (0.5ms)
+Warning. Error encountered while saving cache c32138261136a799be7b0cb54e54166dd77d84b1/authors.css.scssc: can't dump anonymous class #<Class:0x00000002c0c590>
+
+Completed 200 OK in 385ms (Views: 373.1ms | ActiveRecord: 0.0ms)
