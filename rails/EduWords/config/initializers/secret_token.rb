@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-EduWords::Application.config.secret_key_base = '263c7cfc2146637c25e75e9889d3c010334d7ff42285f427fcdb1de12417b030723d0dc19f49ba6fa1db663d7a67f3cd36eb1c3112b3d9ad57cad99ab42d6966'
+EduWords::Application.config.secret_key_base = '5227a1d3dd067fa183d3876fe4c37f85c7b2dfab050b754616f04faadffdb28a36ee19aad9535155c3b3c552a7130f717768d4cef23045adb00ccf1a60921b34'
