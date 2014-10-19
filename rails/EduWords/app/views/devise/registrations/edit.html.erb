@@ -9,6 +9,14 @@
   <div><%= f.label :email %><br />
   <%= f.email_field :email, autofocus: true %></div>
 
+  <% if current_member.role == 'admin' %>
+    <div><%= f.label :role %><br />
+    <%= f.text_field :role, autofocus: true %></div>
+  <% else %>
+    Your role:
+  <% end %>
+  
+
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
