@@ -13,7 +13,7 @@
     <div><%= f.label :role %><br />
     <%= f.text_field :role, autofocus: true %></div>
   <% else %>
-    Your role:
+    Your role: <%= current_member.role %>
   <% end %>
   
 
