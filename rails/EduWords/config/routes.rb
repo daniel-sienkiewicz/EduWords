@@ -1,4 +1,6 @@
 EduWords::Application.routes.draw do
+  resources :tests
+
   devise_for :members
   root :to =>'home#index'
   #devise_for :members,:controllers => { :registrations =>'registration'}

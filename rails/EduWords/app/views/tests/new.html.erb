@@ -1,0 +1,9 @@
+<% if member_signed_in? %>
+	<h1>New test</h1>
+
+	<%= render 'form' %>
+
+	<%= link_to 'Back', tests_path %>
+<% else %>
+  Access denied
+<% end %>

@@ -1,0 +1,23 @@
+<% if member_signed_in? %>
+	<p id="notice"><%= notice %></p>
+
+	<p>
+  		<strong>Result:</strong>
+  		<%= @test.result %>
+	</p>
+
+	<p>
+  		<strong>Date:</strong>
+  		<%= @test.date %>
+	</p>
+
+	<p>
+  		<strong>Member:</strong>
+  		<%= @test.member_id %>
+	</p>
+
+	<%= link_to 'Edit', edit_test_path(@test) %> |
+	<%= link_to 'Back', tests_path %>
+<% else %>
+  Access denied
+<% end %>
