@@ -1,0 +1,8 @@
+ language: ruby
+ rvm: "2.1.1"
+ bundler_args: --without production
+# uncomment this line if your project needs to run something other than `rake`:
+ script: 
+ - cd rails/EduWords
+ - bin/rake rails/EduWords/db:migrate RAILS_ENV=test
+ - bundle exec rspec spec
