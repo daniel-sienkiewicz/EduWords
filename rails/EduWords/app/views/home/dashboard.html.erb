@@ -1,2 +1,12 @@
-<p>hi welcome to Ruby community. you have successfully registered to your rails club account</p>
-<%= link_to "Sign out", destroy_member_session_path, :method => :delete %>
+<% if member_signed_in? %> <h1>This is only for admin!!</h1>
+	All users:
+	<%= Member.count() %>
+	All tests:
+	<%= Test.count() %>
+	<br />
+	Logs:
+	<br />
+	<%= log = File.open('log/development.log').read %>
+<% else %>
+	access denied
+<% end %>

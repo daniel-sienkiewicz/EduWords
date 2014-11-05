@@ -2,13 +2,13 @@ class TestsController < ApplicationController
   before_action :set_test, only: [:show, :edit, :update, :destroy]
   respond_to :html, :xml, :json
   def index
-    if member_signed_in?
-    if current_member.role == 'admin'
-      @tests = Test.all
-    else
-      @tests = Test.find(:all, :conditions => ['member_id = ?', current_member.id])
-    end
-    respond_with(@tests)
+    if  member_signed_in?
+      if current_member.role == 'admin'
+       @tests = Test.all
+      else
+       @tests = Test.find(:all, :conditions => ['member_id = ?', current_member.id])
+      end
+      respond_with(@tests)
     end
   end
 
