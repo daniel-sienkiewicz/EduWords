@@ -4,5 +4,5 @@
 # uncomment this line if your project needs to run something other than `rake`:
  script: 
  - cd rails/EduWords
- - bin/rake rails/EduWords/db:migrate RAILS_ENV=test
+ - bin/rake db:migrate RAILS_ENV=test
  - bundle exec rspec spec
