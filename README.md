@@ -11,8 +11,4 @@ Aplikacja mobilna o nazwie "EduWords" to program, który umożliwia naukę za po
 
 ##Wstępny podział prac oraz wybór technologii
 * Daniel Sienkiewicz - wykonanie strony www (w technologii Ruby On Rails),
-<<<<<<< HEAD
 * Michał Skałkowski - wykonanie aplikacji mobilnej na system Android oraz frontend do strony [eduwords.project-midas.com](http://eduwords.project-midas.com) oraz strona wizytówkowa [zespołu](https://bitbucket.org/Michaldwadwa/midas-website) wykonana w technologii Django.
-=======
-* Michał Skałkowski - wykonanie aplikacji mobilnej na system Android oraz frontend do strony [eduwords.project-midas.com](http://eduwords.project-midas.com) oraz strona wizytówkowa [zespołu](https://bitbucket.org/Michaldwadwa/midas-website) wykonana w technologii Django.
->>>>>>> 4619e1ab9508fcd40ab6fff38a129911eeee19f7
