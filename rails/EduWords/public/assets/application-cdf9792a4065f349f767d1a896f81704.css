@@ -1,0 +1,122 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+ body{
+ 	font-family: 'Lato', sans-serif;
+ }
+
+
+/*navbar*/
+.navbar-brand {
+    padding: 15px 0px;
+}
+
+/*.navbar {*/
+    /*background: #3c3f41;*/
+    /*box-shadow: 0px 20px 100px rgba(0, 0, 0, 0.2);*/
+/*}*/
+
+.navbar {
+    margin: 0px 0px;
+    border: 0px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.navbar a {
+    color: #ffffff !important;
+    font-weight: 700;
+    -webkit-transition: background-color 600ms linear;
+    -moz-transition: background-color 1000ms linear;
+    -o-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 600ms linear;
+}
+
+.navbar .navbar-collapse a {
+    text-transform: uppercase;
+}
+
+.navbar .dropdown ul a {
+    text-transform: capitalize;
+}
+
+.navbar a:hover {
+
+    background: rgba(0, 0, 0, 0.6) !important;
+}
+.navbar .open > a{
+	background-color: rgba(0, 0, 0, 0.5) !important;
+}
+.navbar .open ul{
+		background-color: rgba(0, 0, 0, 0.5) !important;
+
+}
+.navbar{
+	border-radius: 0px !important;
+}
+@media (min-width: 768px) {
+    .navbar-brand {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 45px;
+        padding-top: 25px;
+    }
+
+    .navbar i {
+        display: block;
+        font-size: 20px;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .navbar i {
+        padding-right: 15px;
+    }
+
+    .navbar-toggle {
+        background: #494949;
+        border: 2px solid #ffffff !important;
+    }
+
+    .navbar-toggle span {
+        background: #ffffff;
+    }
+
+}
+
+
+
+
+
+.title h1{
+	text-align: center;
+}
+.main-icon img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.main-icon{
+    margin-top: 30px;
+}
+.icon-login{
+	text-align: center;
+}
+/* line 4, /home/henio/git/EduWords/rails/EduWords/app/assets/stylesheets/home.css.scss */
+a {
+  font-size: 52 px;
+}
