@@ -1,14 +1,8 @@
-<% if member_signed_in? %>
-
-	<h3>you have succesfully signed in</h3>
-	<%= link_to "Sign Out", destroy_member_session_path, :method => :delete %>
-	<%= link_to "edit account", edit_member_registration_path%>
-	<%= link_to 'tests', tests_path %>
-	<% if current_member.role == 'admin'%>
-		<%= link_to 'dashboard', dashboard_path %>
-	<% end %>
+<% if member_signed_in? && current_member.role == 'admin' %>
+<div class="main-icon">
+	<img src="/recovery.png" alt="admin" class="img-responsive">
+</div>
 <% else %>
-
 <div class="main-icon">
 	<img src="/mainpage.png" alt="eduwords" class="img-responsive">
 </div>
