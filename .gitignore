@@ -1,3 +1,5 @@
 rails/EduWords/log/
 rails/EduWords/db/development.sqlite3/
 rails/EduWords/db/test.sqlite3/
+bin/
+gen/
