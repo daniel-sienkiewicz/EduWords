@@ -22,7 +22,7 @@
                 <li><a href="/members/sign_up">Sign up</a></li>
               <% else %>
                 <li><a href="/members/edit">Edit account</a></li>
-                 <% if current_member.role='admin' %>
+                 <% if current_member.role =='admin' %>
                  <li><a href="/dashboard">Admin</a></li>
                  <% end %>
                 <li><a data-method="delete" href="/members/sign_out">Log out</a></li>
