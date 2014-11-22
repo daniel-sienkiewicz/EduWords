@@ -57052,3 +57052,4 @@ Processing by HomeController#dashboard as HTML
   Rendered home/dashboard.html.erb within layouts/application (213.3ms)
   Rendered layouts/_navbar.html.erb (0.2ms)
 Completed 200 OK in 248ms (Views: 244.9ms | ActiveRecord: 1.2ms)
+  [1m[36mMember Load (20.0ms)[0m  [1mSELECT "members".* FROM "members"[0m
