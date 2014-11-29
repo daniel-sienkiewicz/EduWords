@@ -1,0 +1,10 @@
+<% if member_signed_in? %>
+<h1>Editing language</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @language %> |
+<%= link_to 'Back', languages_path %>
+<% else %>
+  Access denied
+<% end %>

@@ -1,0 +1,18 @@
+<% if member_signed_in? %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @language.name %>
+</p>
+
+<p>
+  <strong>Member:</strong>
+  <%= @language.member_id %>
+</p>
+
+<%= link_to 'Edit', edit_language_path(@language) %> |
+<%= link_to 'Back', languages_path %>
+<% else %>
+  Access denied
+<% end %>

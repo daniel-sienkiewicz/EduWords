@@ -1,4 +1,10 @@
 EduWords::Application.routes.draw do
+  resources :tags
+
+  resources :words
+
+  resources :languages
+
   resources :tests
 
   devise_for :members

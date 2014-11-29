@@ -1,0 +1,41 @@
+<% if member_signed_in? %>
+<p id="notice">
+	<%= notice %>
+</p>
+
+<p>
+	<strong>Name 1:</strong>
+	<%= @word.namelanguage1 %>
+</p>
+
+<p>
+	<strong>Name 2:</strong>
+	<%= @word.namelanguage2 %>
+</p>
+
+<p>
+	<strong>Member:</strong>
+	<%= Member.find(@word.member_id).username %>
+</p>
+
+<p>
+	<strong>Language 1:</strong>
+	<%= Language.find(@word.language1_id).name %>
+</p>
+
+<p>
+	<strong>Language 2:</strong>
+	<%= Language.find(@word.language2_id).name %>
+</p>
+<p>
+	<strong>Tags:</strong>
+	<% @word.tags.each do |tag| %>
+	<%= tag.name %>
+<p>
+	<% end %>
+	<br />
+	<%= link_to 'Edit', edit_word_path(@word) %> |
+	<%= link_to 'Back', words_path %>
+	<% else %>
+	Access denied
+	<% end %>

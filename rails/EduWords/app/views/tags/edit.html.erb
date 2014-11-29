@@ -1,0 +1,10 @@
+<% if member_signed_in? %>
+<h1>Editing tag</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @tag %> |
+<%= link_to 'Back', tags_path %>
+<% else %>
+  Access denied
+<% end %>

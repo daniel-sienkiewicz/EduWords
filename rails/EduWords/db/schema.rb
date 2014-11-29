@@ -11,9 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141028214048) do
+ActiveRecord::Schema.define(version: 20141129174355) do
 
   create_table "contacts", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "languages", force: true do |t|
+    t.string   "name"
+    t.integer  "member_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -38,10 +45,36 @@ ActiveRecord::Schema.define(version: 20141028214048) do
   add_index "members", ["email"], name: "index_members_on_email", unique: true
   add_index "members", ["reset_password_token"], name: "index_members_on_reset_password_token", unique: true
 
+  create_table "tags", force: true do |t|
+    t.string   "name"
+    t.integer  "language_member_id"
+    t.integer  "member_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tags_words", id: false, force: true do |t|
+    t.integer "tag_id"
+    t.integer "word_id"
+  end
+
+  add_index "tags_words", ["tag_id"], name: "index_tags_words_on_tag_id"
+  add_index "tags_words", ["word_id"], name: "index_tags_words_on_word_id"
+
   create_table "tests", force: true do |t|
     t.integer  "result"
     t.string   "date"
     t.integer  "member_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "words", force: true do |t|
+    t.string   "namelanguage1"
+    t.string   "namelanguage2"
+    t.integer  "member_id"
+    t.integer  "language1_id"
+    t.integer  "language2_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
