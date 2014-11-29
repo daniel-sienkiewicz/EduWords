@@ -4,9 +4,9 @@ class WordsController < ApplicationController
   def index
     if  member_signed_in?
       if current_member.role == 'admin'
-       @words = Word.all
+        @words = Word.all
       else
-       @words = Word.find(:all, :conditions => ['member_id = ?', current_member.id])
+        @words = Word.find(:all, :conditions => ['member_id = ?', current_member.id])
       end
       respond_with(@tests)
     end
@@ -24,6 +24,8 @@ class WordsController < ApplicationController
   end
 
   def edit
+        @all_tags = Tag.all
+    @all_languages = Language.all
   end
 
   def create
@@ -44,11 +46,12 @@ class WordsController < ApplicationController
   end
 
   private
-    def set_word
-      @word = Word.find(params[:id])
-    end
 
-    def word_params
-      params.require(:word).permit(:namelanguage1, :namelanguage2, :member_id, :language1_id, :language2_id, tag_ids: [])
-    end
+  def set_word
+    @word = Word.find(params[:id])
+  end
+
+  def word_params
+    params.require(:word).permit(:namelanguage1, :namelanguage2, :member_id, :language1_id, :language2_id, tag_ids: [])
+  end
 end

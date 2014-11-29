@@ -63504,3 +63504,576 @@ Processing by WordsController#index as HTML
   Rendered words/index.html.erb within layouts/application (5.2ms)
   Rendered layouts/_navbar.html.erb (0.1ms)
 Completed 200 OK in 23ms (Views: 19.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-29 19:35:58 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mMember Load (0.4ms)[0m  SELECT "members".* FROM "members" WHERE "members"."id" = 8 ORDER BY "members"."id" ASC LIMIT 1
+  Rendered home/index.html.erb within layouts/application (57.1ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+Completed 200 OK in 1530ms (Views: 1485.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/languages.css?body=1" for 127.0.0.1 at 2014-11-29 19:36:00 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-29 19:36:00 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-29 19:36:00 +0100
+
+
+Started GET "/assets/registration.css?body=1" for 127.0.0.1 at 2014-11-29 19:36:00 +0100
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-11-29 19:36:00 +0100
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2014-11-29 19:36:00 +0100
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-11-29 19:36:00 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-29 19:36:00 +0100
+
+
+Started GET "/assets/words.css?body=1" for 127.0.0.1 at 2014-11-29 19:36:00 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-29 19:36:00 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-29 19:36:00 +0100
+
+
+Started GET "/assets/languages.js?body=1" for 127.0.0.1 at 2014-11-29 19:36:00 +0100
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2014-11-29 19:36:00 +0100
+
+
+Started GET "/assets/words.js?body=1" for 127.0.0.1 at 2014-11-29 19:36:00 +0100
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2014-11-29 19:36:00 +0100
+
+
+Started GET "/assets/registration.js?body=1" for 127.0.0.1 at 2014-11-29 19:36:00 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-29 19:36:00 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-29 19:36:00 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-29 19:36:00 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-29 19:36:00 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-29 19:36:00 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-29 19:36:00 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-29 19:36:00 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-29 19:36:01 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-29 19:36:01 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-29 19:36:01 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-29 19:36:01 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-29 19:36:01 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-29 19:36:01 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-29 19:36:01 +0100
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-29 19:36:01 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-29 20:02:05 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mMember Load (0.3ms)[0m  SELECT "members".* FROM "members" WHERE "members"."id" = 8 ORDER BY "members"."id" ASC LIMIT 1
+  Rendered home/index.html.erb within layouts/application (37.7ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 2113ms (Views: 2054.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/registration.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:07 +0100
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:07 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:07 +0100
+
+
+Started GET "/assets/languages.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:07 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:07 +0100
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:07 +0100
+
+
+Started GET "/assets/words.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:07 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:07 +0100
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:07 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:07 +0100
+
+
+Started GET "/assets/languages.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:07 +0100
+
+
+Started GET "/assets/registration.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:07 +0100
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:07 +0100
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:08 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:08 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:08 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:08 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:08 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:08 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:08 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:08 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:08 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:08 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:08 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:08 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:08 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:08 +0100
+
+
+Started GET "/assets/words.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:08 +0100
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:08 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:08 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:08 +0100
+
+
+Started GET "/words" for 127.0.0.1 at 2014-11-29 20:02:11 +0100
+Processing by WordsController#index as HTML
+  [1m[36mMember Load (0.4ms)[0m  [1mSELECT "members".* FROM "members" WHERE "members"."id" = 8 ORDER BY "members"."id" ASC LIMIT 1[0m
+  [1m[35mWord Load (0.4ms)[0m  SELECT "words".* FROM "words"
+  [1m[36mMember Load (86.1ms)[0m  [1mSELECT "members".* FROM "members" WHERE "members"."id" = ? LIMIT 1[0m  [["id", 8]]
+  Rendered words/index.html.erb within layouts/application (106.2ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 425ms (Views: 66.4ms | ActiveRecord: 88.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:11 +0100
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:11 +0100
+
+
+Started GET "/assets/languages.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:11 +0100
+
+
+Started GET "/assets/registration.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:11 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:11 +0100
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:11 +0100
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:11 +0100
+
+
+Started GET "/assets/words.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:11 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:11 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:11 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:11 +0100
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:11 +0100
+
+
+Started GET "/assets/languages.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:11 +0100
+
+
+Started GET "/assets/registration.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:11 +0100
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:11 +0100
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:11 +0100
+
+
+Started GET "/assets/words.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:11 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:11 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:12 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:12 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:12 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:12 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:12 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:12 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:12 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:12 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:12 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:12 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:12 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:12 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:12 +0100
+
+
+Started GET "/words/6/edit" for 127.0.0.1 at 2014-11-29 20:02:13 +0100
+Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mWord Load (0.3ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36mMember Load (0.3ms)[0m  [1mSELECT "members".* FROM "members" WHERE "members"."id" = 8 ORDER BY "members"."id" ASC LIMIT 1[0m
+  Rendered words/_form.html.erb (297.8ms)
+  Rendered words/edit.html.erb within layouts/application (346.9ms)
+Completed 500 Internal Server Error in 360ms
+
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    22:   </div>
+    23:   <div class="field">
+    24:     <%= f.label :language1_id %><br>
+    25:      <%= f.collection_select :language1_id, @all_languages, :id, :name, {}, {:class=>'form-control input'} %>
+    26:   </div>
+    27:   <div class="field">
+    28:     <%= f.label :language2_id %><br>
+  app/views/words/_form.html.erb:25:in `block in _app_views_words__form_html_erb__564338585385894795_29282400'
+  app/views/words/_form.html.erb:2:in `_app_views_words__form_html_erb__564338585385894795_29282400'
+  app/views/words/edit.html.erb:4:in `_app_views_words_edit_html_erb___492137538622231918_29555760'
+
+
+  Rendered /home/henio/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/henio/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/henio/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.6ms)
+
+
+Started GET "/words/6/edit" for 127.0.0.1 at 2014-11-29 20:02:14 +0100
+Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mWord Load (0.4ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36mMember Load (0.3ms)[0m  [1mSELECT "members".* FROM "members" WHERE "members"."id" = 8 ORDER BY "members"."id" ASC LIMIT 1[0m
+  Rendered words/_form.html.erb (4.8ms)
+  Rendered words/edit.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    22:   </div>
+    23:   <div class="field">
+    24:     <%= f.label :language1_id %><br>
+    25:      <%= f.collection_select :language1_id, @all_languages, :id, :name, {}, {:class=>'form-control input'} %>
+    26:   </div>
+    27:   <div class="field">
+    28:     <%= f.label :language2_id %><br>
+  app/views/words/_form.html.erb:25:in `block in _app_views_words__form_html_erb__564338585385894795_17846200'
+  app/views/words/_form.html.erb:2:in `_app_views_words__form_html_erb__564338585385894795_17846200'
+  app/views/words/edit.html.erb:4:in `_app_views_words_edit_html_erb___492137538622231918_19487240'
+
+
+  Rendered /home/henio/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/henio/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered /home/henio/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.3ms)
+
+
+Started GET "/words/6/edit" for 127.0.0.1 at 2014-11-29 20:02:33 +0100
+Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36mMember Load (0.3ms)[0m  [1mSELECT "members".* FROM "members" WHERE "members"."id" = 8 ORDER BY "members"."id" ASC LIMIT 1[0m
+  [1m[35mLanguage Load (0.2ms)[0m  SELECT "languages".* FROM "languages"
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags"[0m
+  Rendered words/_form.html.erb (21.0ms)
+  Rendered words/edit.html.erb within layouts/application (39.2ms)
+  Rendered layouts/_navbar.html.erb (0.2ms)
+Completed 200 OK in 139ms (Views: 79.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/registration.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/languages.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/words.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/registration.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/languages.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/words.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:34 +0100
+
+
+Started GET "/words/6/edit" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mWord Load (0.2ms)[0m  SELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36mMember Load (0.3ms)[0m  [1mSELECT "members".* FROM "members" WHERE "members"."id" = 8 ORDER BY "members"."id" ASC LIMIT 1[0m
+  [1m[35mLanguage Load (0.2ms)[0m  SELECT "languages".* FROM "languages"
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags"[0m
+  Rendered words/_form.html.erb (7.1ms)
+  Rendered words/edit.html.erb within layouts/application (10.1ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 33.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/registration.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/languages.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/words.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/languages.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/registration.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/words.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-29 20:02:35 +0100
