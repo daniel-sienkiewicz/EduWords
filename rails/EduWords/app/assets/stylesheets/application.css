@@ -32,6 +32,10 @@
     background: rgba(0, 0, 0, 0.5);
 }
 
+.nav>li>a:focus{
+	background-color: transparent !important;
+}
+
 .navbar a {
     color: #ffffff !important;
     font-weight: 700;
