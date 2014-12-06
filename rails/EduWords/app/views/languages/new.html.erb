@@ -1,9 +1,5 @@
-<% if member_signed_in? %>
 <h1>New language</h1>
 
 <%= render 'form' %>
 
 <%= link_to 'Back', languages_path %>
-<% else %>
-  Access denied
-<% end %>

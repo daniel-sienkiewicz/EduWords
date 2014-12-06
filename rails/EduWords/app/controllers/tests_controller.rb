@@ -9,6 +9,8 @@ class TestsController < ApplicationController
        @tests = Test.find(:all, :conditions => ['member_id = ?', current_member.id])
       end
       respond_with(@tests)
+        else
+      redirect_to "/members/sign_in"
     end
   end
 

@@ -1,4 +1,4 @@
-<% if member_signed_in? %> <h1>Listing tests</h1>
+<h1>Listing tests</h1>
 
 <div class="table-responsive">
 	<table class="table table-striped">
@@ -45,6 +45,3 @@ All tests:
 <br>
 
 <%= link_to 'New Test', new_test_path %>
-<% else %>
-Access denied
-<% end %>

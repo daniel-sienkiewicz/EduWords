@@ -9,54 +9,83 @@ class WordsController < ApplicationController
         @words = Word.find(:all, :conditions => ['member_id = ?', current_member.id])
       end
       respond_with(@tests)
+    else
+      redirect_to "/members/sign_in"
     end
   end
 
   def show
-    respond_with(@word)
+    if  member_signed_in?
+      respond_with(@word)
+    else
+      redirect_to "/members/sign_in"
+    end
   end
 
   def new
-    @word = Word.new
-    @all_tags = Tag.all
-    @all_languages = Language.all
-    respond_with(@word)
+    if  member_signed_in?
+      @word = Word.new
+      @all_tags = Tag.all
+      @all_languages = Language.all
+      respond_with(@word)
+    else
+      redirect_to "/members/sign_in"
+    end
   end
 
   def edit
-        @all_tags = Tag.all
-    @all_languages = Language.all
+    if  member_signed_in?
+      @all_tags = Tag.all
+      @all_languages = Language.all
+    else
+      redirect_to "/members/sign_in"
+    end
   end
 
   def create
-    @word = Word.new(word_params)
-    @word.member_id = current_member.id
-    @word.save
-    respond_with(@word)
+    if  member_signed_in?
+      @word = Word.new(word_params)
+      @word.member_id = current_member.id
+      @word.save
+      respond_with(@word)
+    else
+      redirect_to "/members/sign_in"
+    end
   end
 
   def update
-    @word.update(word_params)
-    respond_with(@word)
+    if  member_signed_in?
+      @word.update(word_params)
+      respond_with(@word)
+    else
+      redirect_to "/members/sign_in"
+    end
   end
 
   def destroy
-    @word.destroy
-    respond_with(@word)
-  end
-  
-  def download
-    @words = Word.find(:all, :conditions => ['member_id = ?', current_member.id])
-    wordsy = ""
-    i = 0;
-
-    @words.each do |word|
-      i = i + 1
-      wordsy += i.to_s + "." + " " + word.namelanguage1 + " " + word.namelanguage2 + " " + Language.find(word.language1_id).name + " " + Language.find(word.language2_id).name + "\n"
+    if  member_signed_in?
+      @word.destroy
+      respond_with(@word)
+    else
+      redirect_to "/members/sign_in"
     end
+  end
 
+  def download
+    if  member_signed_in?
+      @words = Word.find(:all, :conditions => ['member_id = ?', current_member.id])
+      wordsy = ""
+      i = 0;
 
-    send_data(wordsy, :filename => "EduWords.txt")
+      @words.each do |word|
+        i = i + 1
+        wordsy += i.to_s + "." + " " + word.namelanguage1 + " " + word.namelanguage2 + " " + Language.find(word.language1_id).name + " " + Language.find(word.language2_id).name + "\n"
+      end
+
+      send_data(wordsy, :filename => "EduWords.txt")
+    else
+      redirect_to "/members/sign_in"
+    end
   end
 
   private

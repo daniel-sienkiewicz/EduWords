@@ -1,4 +1,3 @@
-<% if member_signed_in? %>
 <%= form_for(@language) do |f| %>
   <% if @language.errors.any? %>
     <div id="error_explanation">
@@ -19,7 +18,4 @@
   <div class="actions">
     <%= f.submit %>
   </div>
-<% end %>
-<% else %>
-  Access denied
 <% end %>

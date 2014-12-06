@@ -1,4 +1,3 @@
-<% if member_signed_in? %>
 <p id="notice">
 	<%= notice %>
 </p>
@@ -38,6 +37,3 @@
 	<br />
 	<%= link_to 'Edit', edit_word_path(@word) %> |
 	<%= link_to 'Back', words_path %>
-	<% else %>
-	Access denied
-	<% end %>

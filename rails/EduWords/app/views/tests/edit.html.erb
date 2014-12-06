@@ -1,10 +1,6 @@
-<% if member_signed_in? %>
 	<h1>Editing test</h1>
 
 	<%= render 'form' %>
 
 	<%= link_to 'Show', @test %> |
 	<%= link_to 'Back', tests_path %>
-<% else %>
-  Access denied
-<% end %>
