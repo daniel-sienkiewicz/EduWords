@@ -30,6 +30,5 @@ describe WordsController do
     it "routes to #destroy" do
       delete("/words/1").should route_to("words#destroy", :id => "1")
     end
-
   end
 end

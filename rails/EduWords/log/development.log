@@ -84514,3 +84514,104 @@ Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-06 17:41:13 +
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-06 17:41:13 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-06 17:45:07 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 630ms (Views: 592.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-12-06 17:45:08 +0100
+
+
+Started GET "/assets/languages.css?body=1" for 127.0.0.1 at 2014-12-06 17:45:08 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-06 17:45:08 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-06 17:45:08 +0100
+
+
+Started GET "/assets/registration.css?body=1" for 127.0.0.1 at 2014-12-06 17:45:08 +0100
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2014-12-06 17:45:08 +0100
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-12-06 17:45:08 +0100
+
+
+Started GET "/assets/words.css?body=1" for 127.0.0.1 at 2014-12-06 17:45:08 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-06 17:45:08 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-06 17:45:08 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-06 17:45:09 +0100
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-06 17:45:09 +0100
+
+
+Started GET "/assets/registration.js?body=1" for 127.0.0.1 at 2014-12-06 17:45:09 +0100
+
+
+Started GET "/assets/languages.js?body=1" for 127.0.0.1 at 2014-12-06 17:45:09 +0100
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2014-12-06 17:45:09 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-06 17:45:09 +0100
+
+
+Started GET "/assets/words.js?body=1" for 127.0.0.1 at 2014-12-06 17:45:09 +0100
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2014-12-06 17:45:09 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-06 17:45:09 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-06 17:45:09 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-06 17:45:09 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-06 17:45:09 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-06 17:45:09 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-06 17:45:09 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-06 17:45:09 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-06 17:45:09 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-06 17:45:09 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-06 17:45:09 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-06 17:45:09 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-06 17:45:09 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-06 17:45:09 +0100
