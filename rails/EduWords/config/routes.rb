@@ -10,6 +10,7 @@ EduWords::Application.routes.draw do
   devise_for :members
   root :to =>'home#index'
   get 'dashboard' => 'home#dashboard'
+  get "download", to: "words#download", as: 'download'
 #devise_for :members,:controllers => { :registrations =>'registration'}
 #match 'dashboard' => 'home#dashboard'
 end

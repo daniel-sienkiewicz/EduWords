@@ -44,6 +44,20 @@ class WordsController < ApplicationController
     @word.destroy
     respond_with(@word)
   end
+  
+  def download
+    @words = Word.find(:all, :conditions => ['member_id = ?', current_member.id])
+    wordsy = ""
+    i = 0;
+
+    @words.each do |word|
+      i = i + 1
+      wordsy += i.to_s + "." + " " + word.namelanguage1 + " " + word.namelanguage2 + " " + Language.find(word.language1_id).name + " " + Language.find(word.language2_id).name + "\n"
+    end
+
+
+    send_data(wordsy, :filename => "EduWords.txt")
+  end
 
   private
 

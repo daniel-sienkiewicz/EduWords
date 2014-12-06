@@ -24,7 +24,7 @@
             <td><%= word.namelanguage1 %></td>
             <td><%= word.namelanguage2 %></td>
             <% if current_member.role == 'admin' %>
-              <td><%= Member.find(word.member_id).email %></td>
+              <td><%= Member.find(word.member_id).username %></td>
             <% end %>
               <td><a href='<%= edit_word_path(word) %>'><button type="button" class="btn btn-xs btn-success">Edit &raquo;</button></a></td>
               <td><a href='/words/<%= word.id %>'><button type="button" class="btn btn-xs btn-success">Show &raquo;</button></a></td>
@@ -36,8 +36,9 @@
   </div>
 
 <br>
-<p><a href='/words/new' class="btn btn-primary btn-lg" role="button">New Word &raquo;</a>
-<br /><br />
+<p><a href='/words/new' class="btn btn-primary btn-lg" role="button">New Word &raquo;</a></p>
+<a href='/download' class="btn btn-primary btn-lg" role="button">Download &raquo;</a></p>
+<br />
 All words:
 <%= @words.count %>
 <% else %>
