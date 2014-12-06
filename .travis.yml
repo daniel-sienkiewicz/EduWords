@@ -4,5 +4,5 @@
  script: 
  - cd rails/EduWords
  - bundle install
- - bin/rake db:migrate RAILS_ENV=test
+ - /bin/rake db:migrate RAILS_ENV=test
  - bundle exec rspec spec
