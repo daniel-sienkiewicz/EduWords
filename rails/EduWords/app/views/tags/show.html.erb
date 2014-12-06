@@ -5,16 +5,12 @@
   <strong>Name:</strong>
   <%= @tag.name %>
 </p>
-
-<p>
-  <strong>Language member:</strong>
-  <%= @tag.language_member_id %>
-</p>
-
-<p>
-  <strong>Member:</strong>
-  <%= @tag.member_id %>
-</p>
+<% if current_member.role == 'admin'%>
+	<p>
+  		<strong>Member:</strong>
+  		<%= Member.find(@tag.member_id).username %>
+	</p>
+<% end %>
 
 <%= link_to 'Edit', edit_tag_path(@tag) %> |
 <%= link_to 'Back', tags_path %>

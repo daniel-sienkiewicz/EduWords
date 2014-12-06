@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141129174355) do
+ActiveRecord::Schema.define(version: 20141206143642) do
 
   create_table "contacts", force: true do |t|
     t.datetime "created_at"
@@ -53,6 +53,11 @@ ActiveRecord::Schema.define(version: 20141129174355) do
     t.datetime "updated_at"
   end
 
+  create_table "tags_tests", id: false, force: true do |t|
+    t.integer "test_id"
+    t.integer "tag_id"
+  end
+
   create_table "tags_words", id: false, force: true do |t|
     t.integer "tag_id"
     t.integer "word_id"
@@ -60,6 +65,11 @@ ActiveRecord::Schema.define(version: 20141129174355) do
 
   add_index "tags_words", ["tag_id"], name: "index_tags_words_on_tag_id"
   add_index "tags_words", ["word_id"], name: "index_tags_words_on_word_id"
+
+  create_table "test_tag", id: false, force: true do |t|
+    t.integer "test_id"
+    t.integer "tag_id"
+  end
 
   create_table "tests", force: true do |t|
     t.integer  "result"

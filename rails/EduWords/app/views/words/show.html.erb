@@ -13,10 +13,12 @@
 	<%= @word.namelanguage2 %>
 </p>
 
-<p>
-	<strong>Member:</strong>
-	<%= Member.find(@word.member_id).username %>
-</p>
+<% if current_member.role == 'admin'%>
+	<p>
+		<strong>Member:</strong>
+		<%= Member.find(@word.member_id).username %>
+	</p>
+<% end %>
 
 <p>
 	<strong>Language 1:</strong>

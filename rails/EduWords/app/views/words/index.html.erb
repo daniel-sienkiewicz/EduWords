@@ -20,9 +20,11 @@
       <tr>
         <td><%= word.namelanguage1 %></td>
         <td><%= word.namelanguage2 %></td>
-        <td><%= Member.find(word.member_id).username %></td>
-        <td><%= word.language1_id %></td>
-        <td><%= word.language2_id %></td>
+        <% if current_member.role == 'admin' %>
+        	<td><%= Member.find(word.member_id).username %></td>
+        <% end %>
+        <td><%= Language.find(word.language1_id).name %></td>
+        <td><%= Language.find(word.language2_id).name %></td>
         <td><%= link_to 'Show', word %></td>
         <td><%= link_to 'Edit', edit_word_path(word) %></td>
         <td><%= link_to 'Destroy', word, method: :delete, data: { confirm: 'Are you sure?' } %></td>

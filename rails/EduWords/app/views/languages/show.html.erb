@@ -6,10 +6,12 @@
   <%= @language.name %>
 </p>
 
-<p>
-  <strong>Member:</strong>
-  <%= @language.member_id %>
-</p>
+<% if current_member.role == 'admin'%>
+	<p>
+  		<strong>Member:</strong>
+  		<%= Member.find(@language.member_id).username %>
+	</p>
+<% end %>
 
 <%= link_to 'Edit', edit_language_path(@language) %> |
 <%= link_to 'Back', languages_path %>
