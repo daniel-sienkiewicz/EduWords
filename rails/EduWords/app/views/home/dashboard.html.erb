@@ -1,13 +1,61 @@
-<% if member_signed_in? && current_member.role == 'admin' %>
-	<h1>This is only for admin!!</h1>
-	All users:
-	<%= Member.count() %>
-	All tests:
-	<%= Test.count() %>
-	<br />
-	Logs:
-	<br />
-	<%= log = File.open('log/development.log').read %>
+<% if member_signed_in? && current_member.role == 'admin' %> <h1>This is only for admin!!</h1>
+<div class="table-responsive">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Words</th>
+				<th>Languages</th>
+				<th>Tags</th>
+				<th>Tests</th>
+				<th>Users</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><%= Word.count %></td>
+				<td><%= Language.count %></td>
+				<td><%= Tag.count %></td>
+				<td><%= Test.count %></td>
+				<td><%= Member.count %></td>				
+			</tr>
+		</tbody>
+	</table>
+</div>
+<br />
+<div class="table-responsive">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Username</th>
+				<th>Email</th>
+				<th>Role</th>
+				<th>Created at</th>
+				<th>Last sign in at</th>
+				<th>Sign in count</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% Member.all.each do |member| %>
+			<tr>
+				<td><%= member.id %></td>
+				<td><%= member.username %></td>
+				<td><%= member.email %></td>
+				<td><%= member.role %></td>
+				<td><%= member.created_at %></td>
+				<td><%= member.last_sign_in_at %></td>
+				<td><%= member.sign_in_count %></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+
+<br />
+
+<h2>Logs:</h2>
+<br />
+<%= log = File.open('log/development.log').read %>
 <% else %>
-	access denied
+access denied
 <% end %>

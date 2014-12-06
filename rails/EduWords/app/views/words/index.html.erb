@@ -1,41 +1,45 @@
 <% if member_signed_in? %>
 <h1>Listing words</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name 1</th>
-      <th>Name 2</th>
-      <th>Member</th>
-      <th>Language 1</th>
-      <th>Language 2</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @words.each do |word| %>
-      <tr>
-        <td><%= word.namelanguage1 %></td>
-        <td><%= word.namelanguage2 %></td>
-        <% if current_member.role == 'admin' %>
-        	<td><%= Member.find(word.member_id).username %></td>
-        <% end %>
-        <td><%= Language.find(word.language1_id).name %></td>
-        <td><%= Language.find(word.language2_id).name %></td>
-        <td><%= link_to 'Show', word %></td>
-        <td><%= link_to 'Edit', edit_word_path(word) %></td>
-        <td><%= link_to 'Destroy', word, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Language</th>
+          <th>Language</th>
+          <% if current_member.role == 'admin' %>
+            <th>User</th>
+          <% end %>
+          <th>Edit</th>
+          <th>Show</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% i = 0 %>
+        <% @words.each do |word| %>
+          <tr>
+            <td><%= i = i + 1 %></td>
+            <td><%= word.namelanguage1 %></td>
+            <td><%= word.namelanguage2 %></td>
+            <% if current_member.role == 'admin' %>
+              <td><%= Member.find(word.member_id).email %></td>
+            <% end %>
+              <td><a href='<%= edit_word_path(word) %>'><button type="button" class="btn btn-xs btn-success">Edit &raquo;</button></a></td>
+              <td><a href='/words/<%= word.id %>'><button type="button" class="btn btn-xs btn-success">Show &raquo;</button></a></td>
+              <td><%= link_to word, method: :delete, data: { confirm: 'Are you sure?' } do %><button type="button" class="btn btn-xs btn-success">Destroy &raquo;</button><% end %></td>
+          </tr>
+          <% end %>
+      </tbody>
+    </table>
+  </div>
 
 <br>
-
-<%= link_to 'New Word', new_word_path %>
+<p><a href='/words/new' class="btn btn-primary btn-lg" role="button">New Word &raquo;</a>
+<br /><br />
+All words:
+<%= @words.count %>
 <% else %>
   Access denied
 <% end %>

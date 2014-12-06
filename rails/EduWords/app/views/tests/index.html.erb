@@ -1,40 +1,50 @@
-<% if member_signed_in? %>
-  <h1>Listing tests</h1>
+<% if member_signed_in? %> <h1>Listing tests</h1>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Result</th>
-        <th>Date</th>
-        <% if current_member.role == "admin" %>
-          <th>Member</th>
-        <% end %>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @tests.each do |test| %>
-        <tr>
-          <td><%= test.result %></td>
-          <td><%= test.date %></td>
-          <% if current_member.role == "admin" %>
-            <td><%= Member.find(test.member_id).username %></td>
-            <td><%= link_to 'Show', test %></td>
-            <td><%= link_to 'Edit', edit_test_path(test) %></td>
-            <td><%= link_to 'Destroy', test, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          <% end %>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+<div class="table-responsive">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Result</th>
+				<th>Tags</th>
+				<th>Date</th>
+				<% if current_member.role == 'admin' %>
+				<th>User</th>
+				<th>Edit</th>
+				<% end %>
+				<th>Delete</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% i = 0 %>
+			<% @tests.each do |test| %>
+			<tr>
+				<td><%= i = i + 1 %></td>
+				<td><%= test.result %></td>
+				<td><% test.tags.each do |tag| %>
+				<%= tag.name %> <%end %></td>
+				<td><%= test.date %></td>
+				<% if current_member.role == 'admin' %>
+				<td><%= Member.find(test.member_id).username %></td>
+				<td><a href='<%= edit_test_path(test) %>'>
+				<button type="button" class="btn btn-xs btn-success">
+					Edit &raquo;
+				</button></a></td>
+				<% end %>
+				<td><%= link_to test, method: :delete, data: { confirm: 'Are you sure?' } do %>
+				<button type="button" class="btn btn-xs btn-success">
+					Destroy &raquo;
+				</button><% end %></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
 All tests:
 <%= @tests.count %>
-  <br>
+<br>
 
-  <%= link_to 'New Test', new_test_path %>
+<%= link_to 'New Test', new_test_path %>
 <% else %>
-  Access denied
+Access denied
 <% end %>
