@@ -4,12 +4,12 @@ class TestsController < ApplicationController
   def index
     if  member_signed_in?
       if current_member.role == 'admin'
-       @tests = Test.all
+        @tests = Test.all
       else
-       @tests = Test.find(:all, :conditions => ['member_id = ?', current_member.id])
+        @tests = Test.find(:all, :conditions => ['member_id = ?', current_member.id])
       end
       respond_with(@tests)
-        else
+    else
       redirect_to "/members/sign_in"
     end
   end
@@ -28,8 +28,12 @@ class TestsController < ApplicationController
 
   def create
     @test = Test.new(test_params)
-    @test.member_id = current_member.id
-    @test.save
+    if  member_signed_in?
+      @test.member_id = current_member.id
+    end
+    if @test.member_id != nil
+     @test.save
+    end
     respond_with(@test)
   end
 
@@ -44,11 +48,12 @@ class TestsController < ApplicationController
   end
 
   private
-    def set_test
-      @test = Test.find(params[:id])
-    end
 
-    def test_params
-      params.require(:test).permit(:result, :date, :member_id)
-    end
+  def set_test
+    @test = Test.find(params[:id])
+  end
+
+  def test_params
+    params.require(:test).permit(:result, :date, :member_id)
+  end
 end
