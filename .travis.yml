@@ -4,4 +4,5 @@
  script: 
  - cd rails/EduWords
  - bundle install
+ - bin/rake db:migrate
  - bundle exec rspec spec
