@@ -8,7 +8,7 @@ describe "home" do
 
   	it { should have_title('EduWords') }
   	it { should have_selector("img") }
-  	it { should have_content("EduWords Home Account") }
+  	it { should have_content("EduWords Account") }
   end
 end
 
@@ -19,13 +19,13 @@ describe "members" do
   	before { visit root_path }
 
   	it { should have_title('EduWords') }
-  	it { should have_content("EduWords Home Account") }
+  	it { should have_content("EduWords Account") }
   end
 
   describe "sign_up" do
   	before { visit root_path }
 
   	it { should have_title('EduWords') }
-  	it { should have_content("EduWords Home Account") }
+  	it { should have_content("EduWords Account") }
   end
 end

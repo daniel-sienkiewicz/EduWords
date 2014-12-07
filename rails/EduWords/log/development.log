@@ -86298,3 +86298,442 @@ Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-06 19:25:14 +
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-06 19:25:14 +0100
+
+
+Started GET "/words/new" for 127.0.0.1 at 2014-12-07 17:38:48 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WordsController#new as HTML
+  [1m[35mMember Load (0.3ms)[0m  SELECT "members".* FROM "members" WHERE "members"."id" = 2 ORDER BY "members"."id" ASC LIMIT 1
+  [1m[36mLanguage Load (0.3ms)[0m  [1mSELECT "languages".* FROM "languages"[0m
+  [1m[35mTag Load (0.4ms)[0m  SELECT "tags".* FROM "tags"
+  Rendered words/_form.html.erb (181.5ms)
+  Rendered words/new.html.erb within layouts/application (190.6ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 596ms (Views: 474.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/languages.css?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/registration.css?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/words.css?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/languages.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/registration.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/words.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:49 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-07 17:38:51 +0100
+Processing by HomeController#index as HTML
+  [1m[36mMember Load (0.3ms)[0m  [1mSELECT "members".* FROM "members" WHERE "members"."id" = 2 ORDER BY "members"."id" ASC LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2014-12-07 17:38:52 +0100
+Processing by WordsController#index as HTML
+  [1m[35mMember Load (0.3ms)[0m  SELECT "members".* FROM "members" WHERE "members"."id" = 2 ORDER BY "members"."id" ASC LIMIT 1
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. You have also used finder options. These are also deprecated. Please build a scope instead of using finder options. (called from index at /home/henio/git/EduWords/rails/EduWords/app/controllers/words_controller.rb:9)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /home/henio/git/EduWords/rails/EduWords/app/controllers/words_controller.rb:9)
+  [1m[36mWord Load (0.4ms)[0m  [1mSELECT "words".* FROM "words" WHERE (member_id = 2)[0m
+  Rendered words/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 52ms (Views: 19.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/languages" for 127.0.0.1 at 2014-12-07 17:38:53 +0100
+Processing by LanguagesController#index as HTML
+  [1m[35mMember Load (0.3ms)[0m  SELECT "members".* FROM "members" WHERE "members"."id" = 2 ORDER BY "members"."id" ASC LIMIT 1
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. You have also used finder options. These are also deprecated. Please build a scope instead of using finder options. (called from index at /home/henio/git/EduWords/rails/EduWords/app/controllers/languages_controller.rb:9)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /home/henio/git/EduWords/rails/EduWords/app/controllers/languages_controller.rb:9)
+  [1m[36mLanguage Load (0.4ms)[0m  [1mSELECT "languages".* FROM "languages" WHERE (member_id = 2)[0m
+  Rendered languages/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 25.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tags" for 127.0.0.1 at 2014-12-07 17:38:54 +0100
+Processing by TagsController#index as HTML
+  [1m[35mMember Load (0.4ms)[0m  SELECT "members".* FROM "members" WHERE "members"."id" = 2 ORDER BY "members"."id" ASC LIMIT 1
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. You have also used finder options. These are also deprecated. Please build a scope instead of using finder options. (called from index at /home/henio/git/EduWords/rails/EduWords/app/controllers/tags_controller.rb:9)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /home/henio/git/EduWords/rails/EduWords/app/controllers/tags_controller.rb:9)
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (member_id = 2)[0m
+  Rendered tags/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 24.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tests" for 127.0.0.1 at 2014-12-07 17:38:54 +0100
+Processing by TestsController#index as HTML
+  [1m[35mMember Load (0.4ms)[0m  SELECT "members".* FROM "members" WHERE "members"."id" = 2 ORDER BY "members"."id" ASC LIMIT 1
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. You have also used finder options. These are also deprecated. Please build a scope instead of using finder options. (called from index at /home/henio/git/EduWords/rails/EduWords/app/controllers/tests_controller.rb:9)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /home/henio/git/EduWords/rails/EduWords/app/controllers/tests_controller.rb:9)
+  [1m[36mTest Load (0.4ms)[0m  [1mSELECT "tests".* FROM "tests" WHERE (member_id = 2)[0m
+  [1m[35mTag Load (0.4ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "tags_tests" ON "tags"."id" = "tags_tests"."tag_id" WHERE "tags_tests"."test_id" = ?  [["test_id", 7]]
+  Rendered tests/index.html.erb within layouts/application (164.7ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 226ms (Views: 185.8ms | ActiveRecord: 2.4ms)
+
+
+Started DELETE "/members/sign_out" for 127.0.0.1 at 2014-12-07 17:38:56 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Xa/Jivh2z/wXRuz9PihIURDapY/zRfIjDYs+wnC0bYE="}
+  [1m[36mMember Load (0.7ms)[0m  [1mSELECT "members".* FROM "members" WHERE "members"."id" = 2 ORDER BY "members"."id" ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 41ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-07 17:38:56 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/languages.css?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/registration.css?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/words.css?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/languages.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/registration.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/words.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-07 17:38:57 +0100
+
+
+Started GET "/members/sign_in" for 127.0.0.1 at 2014-12-07 17:38:58 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (30.4ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 53ms (Views: 50.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/members/sign_up" for 127.0.0.1 at 2014-12-07 17:38:59 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/members/sign_in" for 127.0.0.1 at 2014-12-07 17:39:01 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 43ms (Views: 39.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/members/sign_in" for 127.0.0.1 at 2014-12-07 17:39:04 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0XQeblBLY9pxvtSvM4r8UHYuBgrkCgGcAeev/Eu9sHA=", "member"=>{"email"=>"test@test.pl", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mMember Load (0.3ms)[0m  SELECT "members".* FROM "members" WHERE "members"."email" = 'test@test.pl' ORDER BY "members"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (13.2ms)[0m  UPDATE "members" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "members"."id" = 2  [["current_sign_in_at", Sun, 07 Dec 2014 16:39:04 UTC +00:00], ["sign_in_count", 2], ["updated_at", Sun, 07 Dec 2014 16:39:04 UTC +00:00]]
+  [1m[36m (127.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 277ms (ActiveRecord: 140.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+Processing by HomeController#index as HTML
+  [1m[35mMember Load (0.3ms)[0m  SELECT "members".* FROM "members" WHERE "members"."id" = 2 ORDER BY "members"."id" ASC LIMIT 1
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/languages.css?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/registration.css?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/words.css?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/tests.css?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/languages.js?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/registration.js?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/tests.js?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/words.js?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-07 17:39:05 +0100
+
+
+Started GET "/members/edit" for 127.0.0.1 at 2014-12-07 17:39:07 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mMember Load (0.4ms)[0m  [1mSELECT "members".* FROM "members" WHERE "members"."id" = 2 ORDER BY "members"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_navbar.html.erb (0.2ms)
+Completed 200 OK in 27ms (Views: 23.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2014-12-07 17:39:11 +0100
+Processing by WordsController#index as HTML
+  [1m[35mMember Load (0.3ms)[0m  SELECT "members".* FROM "members" WHERE "members"."id" = 2 ORDER BY "members"."id" ASC LIMIT 1
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. You have also used finder options. These are also deprecated. Please build a scope instead of using finder options. (called from index at /home/henio/git/EduWords/rails/EduWords/app/controllers/words_controller.rb:9)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /home/henio/git/EduWords/rails/EduWords/app/controllers/words_controller.rb:9)
+  [1m[36mWord Load (0.2ms)[0m  [1mSELECT "words".* FROM "words" WHERE (member_id = 2)[0m
+  Rendered words/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 20ms (Views: 16.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/words" for 127.0.0.1 at 2014-12-07 17:39:11 +0100
+Processing by WordsController#index as HTML
+  [1m[35mMember Load (0.5ms)[0m  SELECT "members".* FROM "members" WHERE "members"."id" = 2 ORDER BY "members"."id" ASC LIMIT 1
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. You have also used finder options. These are also deprecated. Please build a scope instead of using finder options. (called from index at /home/henio/git/EduWords/rails/EduWords/app/controllers/words_controller.rb:9)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /home/henio/git/EduWords/rails/EduWords/app/controllers/words_controller.rb:9)
+  [1m[36mWord Load (0.4ms)[0m  [1mSELECT "words".* FROM "words" WHERE (member_id = 2)[0m
+  Rendered words/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 34ms (Views: 26.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-07 17:39:12 +0100
+Processing by HomeController#index as HTML
+  [1m[35mMember Load (0.4ms)[0m  SELECT "members".* FROM "members" WHERE "members"."id" = 2 ORDER BY "members"."id" ASC LIMIT 1
+  Rendered home/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.4ms)
