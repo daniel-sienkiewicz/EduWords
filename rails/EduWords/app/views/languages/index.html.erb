@@ -23,9 +23,9 @@
           <% if current_member.role == 'admin' %>
             <td><%= Member.find(language.member_id).username %></td>
           <% end %>
-          <td><a href='<%= edit_language_path(language) %>'><button type="button" class="btn btn-xs btn-success">Edit &raquo;</button></a></td>
-          <td><a href='/languages/<%= language.id %>'><button type="button" class="btn btn-xs btn-success">Show &raquo;</button></a></td>
-          <td><%= link_to language, method: :delete, data: { confirm: 'Are you sure?' } do %><button type="button" class="btn btn-xs btn-success">Destroy &raquo;</button><% end %></td>
+          <td><a href='<%= edit_language_path(language) %>'><i class="fa fa-pencil fa-2x"></i></a></td>
+              <td><a href='/languages/<%= language.id %>'><i class="fa fa-search fa-2x"></i></a></td>
+              <td><%= link_to language, method: :delete, data: { confirm: 'Are you sure?' } do %><i class="fa fa-times fa-2x"></i><% end %></td>
         </tr>
       <% end %>
     </tbody>

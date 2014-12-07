@@ -118,16 +118,28 @@
 
 /*login*/
 
-#login{
+#login, #signup, #edit{
 	margin-top: 20px;
 	background: #E0E0E0;
-	padding: 20px;
+	padding: 20px 20px 50px 20px;
 	border-radius: 20px
 }
-#login .button-log{
+#login{
+	padding: 20px 20px 70px 20px;	
+}
+#login .button-log, #signup .button-log{
 	margin-top: 10px;
 }
-#login .btn{
+#login .btn, #signup .btn{
 	width: 100%
 }
+#edit .btn-update{
+	margin-top: 7px;
+}
 
+
+
+/*table*/
+.table-responsive i{
+	color: #909090;
+}
