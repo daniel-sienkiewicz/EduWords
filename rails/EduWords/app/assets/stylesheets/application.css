@@ -100,10 +100,6 @@
 
 }
 
-
-
-
-
 .title h1{
 	text-align: center;
 }
@@ -119,3 +115,19 @@
 .icon-login{
 	text-align: center;
 }
+
+/*login*/
+
+#login{
+	margin-top: 20px;
+	background: #E0E0E0;
+	padding: 20px;
+	border-radius: 20px
+}
+#login .button-log{
+	margin-top: 10px;
+}
+#login .btn{
+	width: 100%
+}
+
