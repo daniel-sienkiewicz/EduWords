@@ -8,7 +8,7 @@
 			<%= devise_error_messages! %>
 
 			<div>
-				<%= f.label :username %>
+				<label><%= t('username') %></label>
 				<br />
 				<%= f.text_field :username, autofocus: true, class: 'form-control' %>
 			</div>
@@ -20,26 +20,26 @@
 			</div>
 
 			<div>
-				<%= f.label :password %>
+				<label><%= t('password') %></label>
 				<br />
 				<%= f.password_field :password, class: 'form-control' %>
 			</div>
 
 			<div>
-				<%= f.label :password_confirmation %>
+				<label><%= t('passwordConfirmation') %></label>
 				<br />
 				<%= f.password_field :password_confirmation, class: 'form-control' %>
 			</div>
 
 			<div class="button-log">
 				<div class="col-md-6">
-					<%= f.submit "Sign up" , class: 'btn btn-primary'%>
+					<%= f.submit t('signIn') , class: 'btn btn-primary'%>
 				</div>
 
 				<div class="col-md-6">
 					<a href="/members/sign_in">
 					<button class= "btn btn-success">
-						Log in
+						<%= t('logIn') %>
 					</button> </a>
 				</div>
 			</div>

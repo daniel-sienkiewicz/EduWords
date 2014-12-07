@@ -5,14 +5,14 @@
 		<thead>
 			<tr>
 				<th>#</th>
-				<th>Result</th>
+				<th><%= t('result') %></th>
 				<th>Tags</th>
-				<th>Date</th>
+				<th><%= t('date') %></th>
 				<% if current_member.role == 'admin' %>
-				<th>User</th>
-				<th>Edit</th>
+					<th>User</th>
+					<th><%= t('edit') %></th>
 				<% end %>
-				<th>Delete</th>
+				<th><%= t('destroy') %></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -40,8 +40,3 @@
 		</tbody>
 	</table>
 </div>
-All tests:
-<%= @tests.count %>
-<br>
-
-<%= link_to 'New Test', new_test_path %>

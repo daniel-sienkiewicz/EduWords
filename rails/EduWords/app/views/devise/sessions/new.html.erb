@@ -17,7 +17,7 @@
 			</div>
 
 			<div>
-				<%= f.label :password %>
+				<label><%= t('password') %></label>
 				<br />
 				<%= f.password_field :password, autocomplete: "off", :class => "form-control" %>
 			</div>
@@ -29,19 +29,19 @@
 			<% end -%>
 			<div class="button-log">
 				<div class="col-md-6">
-					<%= f.submit "Log in" , class: 'btn btn-primary'%>
+					<%= f.submit t('logIn') , class: 'btn btn-primary'%>
 				</div>
 
 				<div class="col-md-6">
 					<a href="/members/sign_up">
 					<button class= "btn btn-success">
-						Sign up
+						<%= t('signUp') %>
 					</button> </a>
 				</div>
 			</div>
 			<% end %>
 			<div class="col-md-12">
-				<a href="/members/password/new"> Forgot your password? </a>
+				<a href="/members/password/new"> <%= t('forgot') %> </a>
 			</div>
 		</div>
 	</div>

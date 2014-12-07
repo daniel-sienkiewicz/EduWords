@@ -1,16 +1,21 @@
 EduWords::Application.routes.draw do
-  resources :tags
 
-  resources :words
+  scope "(:locale)", locale: /en|pl|de/ do
+    resources :tags
 
-  resources :languages
+    resources :words
 
-  resources :tests
+    resources :languages
 
-  devise_for :members
-  root :to =>'home#index'
-  get 'dashboard' => 'home#dashboard'
-  get "download", to: "words#download", as: 'download'
+    resources :tests
+
+    devise_for :members
+
+    root :to =>'home#index'
+    get 'dashboard' => 'home#dashboard'
+    get "download", to: "words#download", as: 'download'
+  end
+
 #devise_for :members,:controllers => { :registrations =>'registration'}
 #match 'dashboard' => 'home#dashboard'
 end

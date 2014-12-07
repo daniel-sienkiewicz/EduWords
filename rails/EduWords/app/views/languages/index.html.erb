@@ -1,17 +1,15 @@
-<h1>Listing languages</h1>
-
 <div class="table-responsive">
   <table class="table table-striped">
     <thead>
       <tr>
         <th>#</th>
-        <th>Name</th>
+        <th><%= t('name') %></th>
         <% if current_member.role == 'admin' %>
           <th>User</th>
         <% end %>
-        <th>Edit</th>
-        <th>Show</th>
-        <th>Delete</th>
+        <th><%= t('edit') %></th>
+        <th><%= t('show') %></th>
+        <th><%= t('destroy') %></th>
       </tr>
     </thead>
     <tbody>
@@ -25,7 +23,7 @@
           <% end %>
           <td><a href='<%= edit_language_path(language) %>'><i class="fa fa-pencil fa-2x"></i></a></td>
               <td><a href='/languages/<%= language.id %>'><i class="fa fa-search fa-2x"></i></a></td>
-              <td><%= link_to language, method: :delete, data: { confirm: 'Are you sure?' } do %><i class="fa fa-times fa-2x"></i><% end %></td>
+              <td><%= link_to language, method: :delete, data: { confirm: t('areYouSure') } do %><i class="fa fa-times fa-2x"></i><% end %></td>
         </tr>
       <% end %>
     </tbody>
@@ -33,7 +31,4 @@
 </div>
 
 <br>
-<p><a href='/languages/new' class="btn btn-primary btn-lg" role="button">New Language &raquo;</a></p>
-<br />
-All languages:
-<%= @languages.count %>
+<p><a href=<%= new_language_path %> class="btn btn-primary btn-lg" role="button"><%= t('newLanguage')%> &raquo;</a></p>

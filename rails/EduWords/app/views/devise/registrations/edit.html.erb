@@ -8,7 +8,7 @@
 			<%= devise_error_messages! %>
 
 			<div>
-				Username: <%= current_member.username %>
+				<%= t('username') %> <%= current_member.username %>
 			</div>
 
 			<div>
@@ -30,25 +30,25 @@
 			<% end %>
 
 			<div>
-				<%= f.label :password  %> <i>(leave blank if you don't want to change it)</i>
+				<%= f.label t('password')  %> <i>(leave blank if you don't want to change it)</i>
 				<br />
 				<%= f.password_field :password, autocomplete: "off", :class => "form-control" %>
 			</div>
 
 			<div>
-				<%= f.label :password_confirmation %>
+				<%= f.label t('passwordConfirmation') %>
 				<br />
 				<%= f.password_field :password_confirmation, autocomplete: "off", :class => "form-control" %>
 			</div>
 
 			<div>
-				<%= f.label :current_password %>
+				<%= f.label t('currentPassword') %>
 				<br />
 				<%= f.password_field :current_password, autocomplete: "off", :class => "form-control" %>
 			</div>
 
 			<div class= "btn-update">
-				<%= f.submit "Update", :class => "btn btn-info" %>
+				<%= f.submit t('update'), :class => "btn btn-info" %>
 			</div>
 			<% end %>
 

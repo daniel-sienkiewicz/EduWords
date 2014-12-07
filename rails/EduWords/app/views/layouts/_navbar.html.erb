@@ -8,45 +8,45 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="/">EduWords</a>
+				<a class="navbar-brand" href=<%= root_path %>>EduWords</a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<% if member_signed_in? %>
 					<li class="active">
-						<a href="/words"><i class="fa fa-book"></i>Words</a>
+						<a href=<%= words_path %>><i class="fa fa-book"></i><%= t('words') %></a>
 					</li>
 					<li class="active">
-						<a href="/languages"><i class="fa fa-language"></i>Languages</a>
+						<a href=<%= languages_path %>><i class="fa fa-language"></i><%= t('languages') %></a>
 					</li>
 					<li class="active">
-						<a href="/tags"><i class="fa fa-tags"></i>Tags</a>
+						<a href=<%= tags_path %>><i class="fa fa-tags"></i><%= t('tags') %></a>
 					</li>
 					<li class="active">
-						<a href="/tests"><i class="fa fa-graduation-cap"></i>Tests</a>
+						<a href=<%= tests_path %>><i class="fa fa-graduation-cap"></i><%= t('tests') %></a>
 					</li>
 					<% end %>
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cogs"></i>Account<span class="caret"></span></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cogs"></i><%= t('account') %><span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
 							<% if !member_signed_in? %>
 							<li>
-								<a href="/members/sign_in">Sign in</a>
+								<a href=<%= new_member_session_path %>><%= t('signIn') %></a>
 							</li>
 							<li>
-								<a href="/members/sign_up">Sign up</a>
+								<a href=<%= new_member_registration_path %>><%= t('signUp') %></a>
 							</li>
 							<% else %>
 							<li>
-								<a href="/members/edit">Edit account</a>
+								<a href=<%= edit_member_registration_path %>><%= t('editAccount') %></a>
 							</li>
 							<% if current_member.role =='admin' %>
 							<li>
-								<a href="/dashboard">Admin</a>
+								<a href=<%= dashboard_path %>>Admin</a>
 							</li>
 							<% end %>
 							<li>
-								<a data-method="delete" href="/members/sign_out">Log out</a>
+								<a data-method="delete" href=<%= destroy_member_session_path %>><%= t('logOut') %></a>
 							</li>
 							<% end %>
 						</ul>
