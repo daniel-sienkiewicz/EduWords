@@ -1,38 +1,63 @@
-<%= form_for(@word) do |f| %>
+<div class="form-add-update">
+  <%= form_for(@word) do |f| %>
   <% if @word.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@word.errors.count, "error") %> prohibited this word from being saved:</h2>
+  <div id="error_explanation">
+    <h2><%= pluralize(@word.errors.count, "error") %> prohibited this word from being saved:</h2>
 
-      <ul>
+    <ul>
       <% @word.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+      <li><%= msg %></li>
       <% end %>
-      </ul>
-    </div>
+    </ul>
+  </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :namelanguage1 %><br>
-    <%= f.text_field :namelanguage1 %>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <div class="field">
+        <%= f.label :namelanguage1 %><br>
+        <%= f.text_field :namelanguage1, {:class=>'form-control'}  %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :namelanguage2 %><br>
-    <%= f.text_field :namelanguage2 %>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <div class="field">
+        <%= f.label :namelanguage2 %><br>
+        <%= f.text_field :namelanguage2, {:class=>'form-control'} %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :language1_id %><br>
-     <%= f.collection_select :language1_id, @all_languages, :id, :name, {}, {:class=>'form-control input'} %>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <div class="field">
+        <%= f.label :language1_id %><br>
+        <%= f.collection_select :language1_id, @all_languages, :id, :name, {}, {:class=>'form-control input'} %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :language2_id %><br>
-     <%= f.collection_select :language2_id, @all_languages, :id, :name, {}, {:class=>'form-control input'} %>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <div class="field">
+        <%= f.label :language2_id %><br>
+        <%= f.collection_select :language2_id, @all_languages, :id, :name, {}, {:class=>'form-control input'} %>
+      </div>
+    </div>
   </div>
-  
-    <div class="field">
-    <%= f.label :tags %><br />
-    <%= f.collection_select :tag_ids, @all_tags, :id, :name,  {}, { :multiple => true, :class=>'form-control'} %>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <div class="field">
+        <%= f.label :tags %><br />
+        <%= f.collection_select :tag_ids, @all_tags, :id, :name,  {}, { :multiple => true, :class=>'form-control'} %>
+      </div>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <div class="actions">
+        <%= f.submit "Add", :class => "btn btn-success btn-add" %>
+        <%= link_to 'Back', words_path, :class => "btn btn-default btn-back" %>
+      </div>
+    </div>
   </div>
-<% end %>
+  <% end %>
+</div>

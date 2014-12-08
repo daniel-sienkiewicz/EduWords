@@ -1,37 +1,39 @@
-<div class="table-responsive">
+<div class="list">
+  <div class="table-responsive">
     <table class="table table-striped">
       <thead>
         <tr>
-          <th>#</th>
-          <th>Language</th>
-          <th>Language</th>
+          <th class="col-md-1"></th>
+          <th class="col-md-3">Language</th>
           <% if current_member.role == 'admin' %>
-            <th>User</th>
+          <th class="col-md-3">Language 2</th>
+          <th class="col-md-2">User</th>
+          <% else %>
+          <th class="col-md-5">Language 2</th>
           <% end %>
-        <th><%= t('edit') %></th>
-        <th><%= t('show') %></th>
-        <th><%= t('destroy') %></th>
+          <th class="col-md-1"><%= t('edit') %></th>
+          <th class="col-md-1"><%= t('show') %></th>
+          <th class="col-md-1"><%= t('destroy') %></th>
         </tr>
       </thead>
       <tbody>
         <% i = 0 %>
         <% @words.each do |word| %>
-          <tr>
-            <td><%= i = i + 1 %></td>
-            <td><%= word.namelanguage1 %></td>
-            <td><%= word.namelanguage2 %></td>
-            <% if current_member.role == 'admin' %>
-              <td><%= Member.find(word.member_id).username %></td>
-            <% end %>
-              <td><a href='<%= edit_word_path(word) %>'><i class="fa fa-pencil fa-2x"></i></a></td>
-              <td><a href='/words/<%= word.id %>'><i class="fa fa-search fa-2x"></i></a></td>
-              <td><%= link_to word, method: :delete, data: { confirm: 'Are you sure?' } do %><i class="fa fa-times fa-2x"></i><% end %></td>
-          </tr>
+        <tr>
+          <td class="number"><%= i = i + 1 %></td>
+          <td><%= word.namelanguage1 %></td>
+          <td><%= word.namelanguage2 %></td>
+          <% if current_member.role == 'admin' %>
+          <td><%= Member.find(word.member_id).username %></td>
           <% end %>
+          <td><a href='<%= edit_word_path(word) %>'><i class="fa fa-pencil fa-2x"></i></a></td>
+          <td><a href='/words/<%= word.id %>'><i class="fa fa-search fa-2x"></i></a></td>
+          <td><%= link_to word, method: :delete, data: { confirm: 'Are you sure?' } do %><i class="fa fa-times fa-2x"></i><% end %></td>
+        </tr>
+        <% end %>
       </tbody>
     </table>
   </div>
-
-<br>
-<p><a href='/words/new' class="btn btn-primary btn-lg" role="button"><%= t('newWord') %> &raquo;</a></p>
-<a href='/download' class="btn btn-primary btn-lg" role="button"><%= t('download') %> &raquo;</a></p>
+  <a href='/words/new' class="btn btn-success btn-new" role="button"><%= t('newWord') %></a>
+  <a href='/download' class="btn btn-primary btn-download" role="button"><%= t('download') %></a>
+</div>

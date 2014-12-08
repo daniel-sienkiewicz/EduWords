@@ -1,34 +1,43 @@
-<div class="table-responsive">
+<div class="list">
+  <div class="table-responsive">
     <table class="table table-striped">
       <thead>
         <tr>
-          <th>#</th>
-        <th><%= t('name') %></th>
-          <% if current_member.role == 'admin' %>
-            <th>User</th>
-          <% end %>
-        <th><%= t('edit') %></th>
-        <th><%= t('show') %></th>
-        <th><%= t('destroy') %></th>
-        </tr>
-      </thead>
-      <tbody>
-        <% i = 0 %>
-          <% @tags.each do |tag| %>
-            <tr>
-              <td><%= i = i + 1 %></td>
-              <td><%= tag.name %></td>
-              <% if current_member.role == 'admin' %>
-                <td><%= Member.find(tag.member_id).username %></td>
-              <% end %>
-              <td><a href='<%= edit_tag_path(tag) %>'><i class="fa fa-pencil fa-2x"></i></a></td>
-              <td><a href='/tags/<%= tag.id %>'><i class="fa fa-search fa-2x"></i></a></td>
-              <td><%= link_to tag, method: :delete, data: { confirm: t('areYouSure') } do %><i class="fa fa-times fa-2x"></i><% end %></td>
-            </tr>
-          <% end %>
-      </tbody>
-    </table>
-  </div>
+         <th class="col-md-1"></th>
+         <% if current_member.role == 'admin' %>
+         <th class="col-md-4"><%= t('name') %></th>
+         <th class="col-md-4">User</th>
+         <% else %>
+         <th class="col-md-8"><%= t('name') %></th>
+         <% end %>
+         <th class="col-md-1"><%= t('edit') %></th>
+         <th class="col-md-1"><%= t('show') %></th>
+         <th class="col-md-1"><%= t('destroy') %></th>
+       </tr>
+     </thead>
+     <tbody>
+      <% i = 0 %>
+      <% @tags.each do |tag| %>
+      <tr>
+        <td class="number"><%= i = i + 1 %></td>
+        <td><%= tag.name %></td>
+        <% if current_member.role == 'admin' %>
+        <td><%= Member.find(tag.member_id).username %></td>
+        <% end %>
+        <td><a href='<%= edit_tag_path(tag) %>'><i class="fa fa-pencil fa-2x"></i></a></td>
+        <td><a href='/tags/<%= tag.id %>'><i class="fa fa-search fa-2x"></i></a></td>
+        <td><%= link_to tag, method: :delete, data: { confirm: t('areYouSure') } do %><i class="fa fa-times fa-2x"></i><% end %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 <br>
 
-<p><a href=<%= new_tag_path %> class="btn btn-primary btn-lg" role="button"><%= t('newTag') %> &raquo;</a></p>
+<a href=<%= new_tag_path %> class="btn btn-primary btn-lg" role="button"><%= t('newTag') %> &raquo;</a>
+<!-- 
+buttony do zrobienia!
+
+<a href='/words/new' class="btn btn-success btn-new" role="button"><%= t('newWord') %></a>
+<a href='/download' class="btn btn-primary btn-download" role="button"><%= t('download') %></a> -->
+</div>

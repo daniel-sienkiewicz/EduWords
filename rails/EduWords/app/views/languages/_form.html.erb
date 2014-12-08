@@ -1,21 +1,31 @@
-<%= form_for(@language) do |f| %>
+<div class="form-add-update">
+  <%= form_for(@language) do |f| %>
   <% if @language.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@language.errors.count, "error") %> prohibited this language from being saved:</h2>
+  <div id="error_explanation">
+    <h2><%= pluralize(@language.errors.count, "error") %> prohibited this language from being saved:</h2>
 
-      <ul>
+    <ul>
       <% @language.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+      <li><%= msg %></li>
       <% end %>
-      </ul>
-    </div>
+    </ul>
+  </div>
   <% end %>
-
+ <div class="row">
+    <div class="col-md-4 col-md-offset-4">
   <div class="field">
     <label><%= t('name') %></label><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name, {:class=>'form-control'}  %>
+     </div>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <div class="actions">
+        <%= f.submit "Add", :class => "btn btn-success btn-add" %>
+        <%= link_to 'Back', languages_path, :class => "btn btn-default btn-back" %>
+      </div>
+    </div>
   </div>
-<% end %>
+  <% end %>
+</div>

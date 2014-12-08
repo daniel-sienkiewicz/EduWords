@@ -1,39 +1,66 @@
-<p id="notice">
-	<%= notice %>
-</p>
-
-<p>
-	<strong>Name 1:</strong>
-	<%= @word.namelanguage1 %>
-</p>
-
-<p>
-	<strong>Name 2:</strong>
-	<%= @word.namelanguage2 %>
-</p>
-
-<% if current_member.role == 'admin'%>
-	<p>
-		<strong>Member:</strong>
-		<%= Member.find(@word.member_id).username %>
+<div class="show">
+	<p id="notice">
+		<%= notice %>
 	</p>
-<% end %>
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4 mainword">
+			<%= @word.namelanguage1 %>
 
-<p>
-	<strong>Language 1:</strong>
-	<%= Language.find(@word.language1_id).name %>
-</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3 col-md-offset-4 titledata">
+			Translation
+		</div>
+		<div class="col-md-3 userdata">
+			<%= @word.namelanguage2 %>
+		</div>
+	</div>
 
-<p>
-	<strong>Language 2:</strong>
-	<%= Language.find(@word.language2_id).name %>
-</p>
-<p>
-	<strong>Tags:</strong>
-	<% @word.tags.each do |tag| %>
-	<%= tag.name %>
-<p>
+	<% if current_member.role == 'admin'%>
+	<div class="row">
+		<div class="col-md-3 col-md-offset-4 titledata">
+			Member:
+		</div>
+		<div class="col-md-3 userdata">
+			<%= Member.find(@word.member_id).username %>
+
+		</div>
+	</div>
 	<% end %>
-	<br />
-	<%= link_to 'Edit', edit_word_path(@word) %> |
-	<%= link_to 'Back', words_path %>
+	<div class="row">
+		<div class="col-md-3 col-md-offset-4 titledata">
+			Language 1:
+		</div>
+		<div class="col-md-3 userdata">
+			<%= Language.find(@word.language1_id).name %>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-3 col-md-offset-4 titledata">
+			Language 2:
+		</div>
+		<div class="col-md-3 userdata">
+			<%= Language.find(@word.language2_id).name %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3 col-md-offset-4 titledata">
+			Tags:
+		</div>
+		<div class="col-md-3 userdata">
+			<% @word.tags.each do |tag| %>
+			<%= tag.name %>
+			<% end %>
+		</div>
+	</div>
+
+	
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4">
+			<%= link_to 'Edit', edit_word_path(@word), :class => "btn btn-primary btn-edit" %> 
+			<%= link_to 'Back', words_path, :class => "btn btn-default btn-back"%>
+		</div>
+	</div>
+</div>
