@@ -10,7 +10,7 @@
 	</div>
 	<div class="row">
 		<div class="col-md-3 col-md-offset-4 titledata">
-			Translation
+			<%= t('translation')%>
 		</div>
 		<div class="col-md-3 userdata">
 			<%= @word.namelanguage2 %>
@@ -30,7 +30,7 @@
 	<% end %>
 	<div class="row">
 		<div class="col-md-3 col-md-offset-4 titledata">
-			Language 1:
+			<%= t('Sprache')%>
 		</div>
 		<div class="col-md-3 userdata">
 			<%= Language.find(@word.language1_id).name %>
@@ -39,7 +39,7 @@
 
 	<div class="row">
 		<div class="col-md-3 col-md-offset-4 titledata">
-			Language 2:
+			<%= t('Sprache')%>
 		</div>
 		<div class="col-md-3 userdata">
 			<%= Language.find(@word.language2_id).name %>
@@ -47,7 +47,7 @@
 	</div>
 	<div class="row">
 		<div class="col-md-3 col-md-offset-4 titledata">
-			Tags:
+			<%= t('tags') %>
 		</div>
 		<div class="col-md-3 userdata">
 			<% @word.tags.each do |tag| %>
@@ -59,8 +59,8 @@
 	
 	<div class="row">
 		<div class="col-md-4 col-md-offset-4">
-			<%= link_to 'Edit', edit_word_path(@word), :class => "btn btn-primary btn-edit" %> 
-			<%= link_to 'Back', words_path, :class => "btn btn-default btn-back"%>
+			<%= link_to t('edit'), edit_word_path(@word), :class => "btn btn-primary btn-edit" %> 
+			<%= link_to t('back'), words_path, :class => "btn btn-default btn-back"%>
 		</div>
 	</div>
 </div>

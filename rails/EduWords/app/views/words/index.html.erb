@@ -4,12 +4,10 @@
       <thead>
         <tr>
           <th class="col-md-1"></th>
-          <th class="col-md-3">Language</th>
+          <th class="col-md-3"><%= t('language') %></th>
+          <th class="col-md-5"><%= t('language') %></th>
           <% if current_member.role == 'admin' %>
-          <th class="col-md-3">Language 2</th>
-          <th class="col-md-2">User</th>
-          <% else %>
-          <th class="col-md-5">Language 2</th>
+          <td>Username</td>
           <% end %>
           <th class="col-md-1"><%= t('edit') %></th>
           <th class="col-md-1"><%= t('show') %></th>
@@ -28,12 +26,12 @@
           <% end %>
           <td><a href='<%= edit_word_path(word) %>'><i class="fa fa-pencil fa-2x"></i></a></td>
           <td><a href='/words/<%= word.id %>'><i class="fa fa-search fa-2x"></i></a></td>
-          <td><%= link_to word, method: :delete, data: { confirm: 'Are you sure?' } do %><i class="fa fa-times fa-2x"></i><% end %></td>
+          <td><%= link_to word, method: :delete, data: { confirm: t('areYouSure') } do %><i class="fa fa-times fa-2x"></i><% end %></td>
         </tr>
         <% end %>
       </tbody>
     </table>
   </div>
-  <a href='/words/new' class="btn btn-success btn-new" role="button"><%= t('newWord') %></a>
+  <a href=<%= new_word_path %> class="btn btn-success btn-new" role="button"><%= t('newWord') %></a>
   <a href='/download' class="btn btn-primary btn-download" role="button"><%= t('download') %></a>
 </div>
