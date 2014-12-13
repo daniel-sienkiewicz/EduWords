@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20141206143642) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "contacts", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -42,8 +45,8 @@ ActiveRecord::Schema.define(version: 20141206143642) do
     t.string   "role",                   default: "user"
   end
 
-  add_index "members", ["email"], name: "index_members_on_email", unique: true
-  add_index "members", ["reset_password_token"], name: "index_members_on_reset_password_token", unique: true
+  add_index "members", ["email"], name: "index_members_on_email", unique: true, using: :btree
+  add_index "members", ["reset_password_token"], name: "index_members_on_reset_password_token", unique: true, using: :btree
 
   create_table "tags", force: true do |t|
     t.string   "name"
@@ -63,8 +66,8 @@ ActiveRecord::Schema.define(version: 20141206143642) do
     t.integer "word_id"
   end
 
-  add_index "tags_words", ["tag_id"], name: "index_tags_words_on_tag_id"
-  add_index "tags_words", ["word_id"], name: "index_tags_words_on_word_id"
+  add_index "tags_words", ["tag_id"], name: "index_tags_words_on_tag_id", using: :btree
+  add_index "tags_words", ["word_id"], name: "index_tags_words_on_word_id", using: :btree
 
   create_table "test_tag", id: false, force: true do |t|
     t.integer "test_id"
