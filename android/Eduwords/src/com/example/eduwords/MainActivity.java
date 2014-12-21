@@ -1,36 +1,79 @@
 package com.example.eduwords;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.ActionBarActivity;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
+public class MainActivity extends ActionBarActivity implements OnClickListener {
+	final Context context = this;
+	private Toast toast;
+	private long lastBackPressTime = 0;
 
-public class MainActivity extends ActionBarActivity {
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
+		View buttonInfo = findViewById(R.id.button_info);
+		buttonInfo.setOnClickListener(this);
 
+		View buttonExit = findViewById(R.id.button_exit);
+		buttonExit.setOnClickListener(this);
+	}
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
+	public void onClick(View v) {
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+		switch (v.getId()) {
+		case R.id.button_info:
+			final Dialog dialog = new Dialog(context);
+			dialog.setContentView(R.layout.about);
+			dialog.setTitle(R.string.about_title);
+
+			TextView text = (TextView) dialog.findViewById(R.id.text);
+			text.setText(R.string.about_text);
+			ImageView image = (ImageView) dialog.findViewById(R.id.image);
+			image.setImageResource(R.drawable.ic_launcher);
+
+			dialog.show();
+			break;
+
+		case R.id.button_exit:
+			new AlertDialog.Builder(this)
+					.setMessage(R.string.exit_ask)
+					.setCancelable(false)
+					.setNegativeButton(R.string.no, null)
+					.setPositiveButton(R.string.yes,
+							new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog,
+										int id) {
+									MainActivity.this.finish();
+								}
+							}).show();
+			break;
+		}
+	}
+
+	@Override
+	public void onBackPressed() {
+		if (this.lastBackPressTime < System.currentTimeMillis() - 2000) {
+			toast = Toast.makeText(this, R.string.exit_confirm,
+					2000);
+			toast.show();
+			this.lastBackPressTime = System.currentTimeMillis();
+		} else {
+			if (toast != null) {
+				toast.cancel();
+			}
+			super.onBackPressed();
+		}
+	}
 }
