@@ -18,3 +18,11 @@ Aplikacja mobilna o nazwie "EduWords" to program, który umożliwia naukę za po
 * [developer.android.com](http://developer.android.com/training/index.html)
 * [vogella.com](http://www.vogella.com/tutorials/Android/article.html)
 * [techotopia.com](http://www.techotopia.com/index.php/Image:Android_app_development_essentials3.png)
+
+###Ruby On Rails
+* [Ruby on rails](http://www.rubyonrails.pl/)
+* [Ruby doc](http://www.ruby-doc.org/core-2.1.4/)
+* [Rails for Zombies](http://railsforzombies.org/)
+* [Surviving apis with rails](https://www.codeschool.com/courses/surviving-apis-with-rails)
+* [Ruby On Rails & PostgreSQL](https://www.digitalocean.com/community/tutorials/how-to-setup-ruby-on-rails-with-postgres)
+* [Travis help](http://docs.travis-ci.com/)
