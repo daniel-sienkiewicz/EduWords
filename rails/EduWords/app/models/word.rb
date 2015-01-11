@@ -3,6 +3,12 @@ class Word < ActiveRecord::Base
   has_and_belongs_to_many :tags
   belongs_to :member
   belongs_to :language
+  
+  validates_presence_of  :namelanguage1
+  validates_presence_of  :namelanguage2
+  validates_length_of :namelanguage1, :maximum => 80
+  validates_length_of :namelanguage2, :maximum => 80
+  
 
   attr_accessor :tag_ids
   after_create :add_tags
