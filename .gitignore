@@ -1,5 +1,9 @@
 rails/EduWords/log/
 rails/EduWords/db/development.sqlite3/
 rails/EduWords/db/test.sqlite3/
-android/Eduwords/bin/
-android/Eduwords/gen/
+android/androidStudio/Eduwords/.gradle
+android/androidStudio/Eduwords/local.properties
+android/androidStudio/Eduwords/.idea/workspace.xml
+android/androidStudio/Eduwords/.idea/libraries
+android/androidStudio/Eduwords/.DS_Store
+android/androidStudio/Eduwords/build
