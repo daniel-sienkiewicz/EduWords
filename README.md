@@ -18,6 +18,7 @@ Aplikacja mobilna o nazwie "EduWords" to program, który umożliwia naukę za po
 * [developer.android.com](http://developer.android.com/training/index.html)
 * [vogella.com](http://www.vogella.com/tutorials/Android/article.html)
 * [techotopia.com](http://www.techotopia.com/index.php/Image:Android_app_development_essentials3.png)
+* [newthinktank.com](http://www.newthinktank.com/videos/make-android-apps/)
 
 ###Ruby On Rails
 * [Ruby on rails](http://www.rubyonrails.pl/)
