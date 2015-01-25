@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Eduwords</string>
+    <string name="hello_world">Cześć!</string>
+    <string name="action_settings">Ustawienia</string>
+     <string name="exit_ask">Czy na pewno chcesz wyjść?</string>
+    <string name="no">Nie</string>
+	<string name="yes">Tak</string>
+	<string name="about_title">EduWords</string>
+	<string name="about_text">Więcej informacji na eduwords.project-midas.com</string>
+	<string name="exit_confirm">Naciśnij ponownie, aby zamknąć aplikację</string>
+</resources>
