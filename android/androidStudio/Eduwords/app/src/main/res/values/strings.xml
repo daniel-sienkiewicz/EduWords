@@ -2,7 +2,12 @@
 <resources>
 
     <string name="app_name">Eduwords</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world">Hello</string>
     <string name="action_settings">Settings</string>
-
+    <string name="exit_ask">Are you sure you want to exit?</string>
+    <string name="no">No</string>
+	<string name="yes">Yes</string>
+	<string name="about_title">EduWords</string>
+	<string name="about_text">More informations on website eduwords.project-midas.com</string>
+	<string name="exit_confirm">Press back again to close this app</string>
 </resources>
