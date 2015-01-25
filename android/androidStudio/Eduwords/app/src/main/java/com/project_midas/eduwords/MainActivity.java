@@ -30,6 +30,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         View buttonQuiz = findViewById(R.id.button_quiz);
         buttonQuiz.setOnClickListener(this);
 
+        View dataQuiz = findViewById(R.id.button_data);
+        dataQuiz.setOnClickListener(this);
+
         View buttonExit = findViewById(R.id.button_exit);
         buttonExit.setOnClickListener(this);
     }
@@ -39,11 +42,18 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button_quiz:
-                Intent quizScreen = new Intent(this, QuizScreen.class);
-                startActivity(quizScreen);
+                Intent quizActivity = new Intent(this, QuizActivity.class);
+                startActivity(quizActivity);
                 break;
+
+            case R.id.button_data:
+                Intent dataActivity = new Intent(this, DataActivity.class);
+                startActivity(dataActivity);
+                break;
+
+
             case R.id.button_info:
-                Toast.makeText(context, "test", Toast.LENGTH_SHORT).show();
+
                 final Dialog dialog = new Dialog(context);
                 dialog.setContentView(R.layout.about);
                 dialog.setTitle(R.string.about_title);

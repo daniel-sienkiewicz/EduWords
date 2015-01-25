@@ -11,5 +11,13 @@
     <string name="about_text">More informations on website eduwords.project-midas.com</string>
     <string name="exit_confirm">Press back again to close this app</string>
     <string name="title_activity_main_activity2">MainActivity2</string>
+    <string name="button_download">Download</string>
+    <string name="hint_word">word</string>
+    <string name="hint_translate">translate</string>
+    <string name="hint_tag">tag</string>
+    <string name="button_add_word">Add</string>
+    <string name="button_start">Start</string>
+    <string name="edit_quiz_answer">write answer</string>
+    <string name="button_check">check</string>
 
 </resources>
