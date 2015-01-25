@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -26,6 +27,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         View buttonInfo = findViewById(R.id.button_info);
         buttonInfo.setOnClickListener(this);
 
+        View buttonQuiz = findViewById(R.id.button_quiz);
+        buttonQuiz.setOnClickListener(this);
+
         View buttonExit = findViewById(R.id.button_exit);
         buttonExit.setOnClickListener(this);
     }
@@ -34,7 +38,12 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.button_quiz:
+                Intent quizScreen = new Intent(this, QuizScreen.class);
+                startActivity(quizScreen);
+                break;
             case R.id.button_info:
+                Toast.makeText(context, "test", Toast.LENGTH_SHORT).show();
                 final Dialog dialog = new Dialog(context);
                 dialog.setContentView(R.layout.about);
                 dialog.setTitle(R.string.about_title);
