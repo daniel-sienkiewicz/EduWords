@@ -9,6 +9,9 @@ class WordsController < ApplicationController
         @words = Word.find(:all, :conditions => ['member_id = ?', current_member.id])
       end
       respond_with(@tests)
+    elsif params[:u] != ""
+      @member = Member.find(:all, :conditions => ['email = ?', params[:u]]).first
+      @words = Word.find(:all, :conditions => ['member_id = ?', @member.id])
     else
       redirect_to "/members/sign_in"
     end
