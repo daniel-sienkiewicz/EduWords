@@ -25,8 +25,8 @@ class WordsController < ApplicationController
   def new
     if  member_signed_in?
       @word = Word.new
-      @all_tags = Tag.all
-      @all_languages = Language.all
+      @all_tags = Tag.find(:all, :conditions => ['member_id = ?', current_member.id])
+      @all_languages = Language.find(:all, :conditions => ['member_id = ?', current_member.id])
       respond_with(@word)
     else
       redirect_to "/members/sign_in"
@@ -35,8 +35,8 @@ class WordsController < ApplicationController
 
   def edit
     if  member_signed_in?
-      @all_tags = Tag.all
-      @all_languages = Language.all
+      @all_tags = Tag.find(:all, :conditions => ['member_id = ?', current_member.id])
+      @all_languages = Language.find(:all, :conditions => ['member_id = ?', current_member.id])
     else
       redirect_to "/members/sign_in"
     end

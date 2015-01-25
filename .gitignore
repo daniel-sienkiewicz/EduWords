@@ -1,6 +1,7 @@
 rails/EduWords/log/
 rails/EduWords/db/development.sqlite3/
 rails/EduWords/db/test.sqlite3/
+rails/EduWords/tmp/
 android/androidStudio/Eduwords/.gradle
 android/androidStudio/Eduwords/local.properties
 android/androidStudio/Eduwords/.idea/workspace.xml
