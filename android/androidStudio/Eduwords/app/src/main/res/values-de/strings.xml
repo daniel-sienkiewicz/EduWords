@@ -10,4 +10,12 @@
 	<string name="about_title">EduWords</string>
 	<string name="about_text">Für weitere Informationen besuchen eduwords.project-midas.com</string>
 	<string name="exit_confirm">Drücken Sie wieder, um diese App zu schließen</string>
+    <string name="button_download">Herunterladen</string>
+    <string name="hint_word">Wort</string>
+    <string name="hint_translate">Übersetzung</string>
+    <string name="hint_tag">Schlagwort</string>
+    <string name="button_add_word">hinzufügen</string>
+    <string name="button_start">Start</string>
+    <string name="edit_quiz_answer">Schreib Antwort</string>
+    <string name="button_check">überprüf</string>
 </resources>
